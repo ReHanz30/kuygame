@@ -1,0 +1,14 @@
+{
+  "name": "kuybot",
+  "version": "1.0.0",
+  "description": "Bot untuk KuyCountry",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "KuyRhn",
+  "license": "ISC"
+}
