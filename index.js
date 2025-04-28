@@ -1,6 +1,9 @@
+require('dotenv').config(); // Memuat variabel lingkungan dari .env
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES] });
-const { token } = require('./config.json'); // Pastikan untuk menambahkan token ke file config.json
+
+// Menggunakan token dari file .env
+const token = process.env.DISCORD_TOKEN;
 
 // Game: Slot
 function slotGame() {
@@ -45,5 +48,5 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-// Login bot dengan token
+// Login bot dengan token dari .env
 client.login(token);
